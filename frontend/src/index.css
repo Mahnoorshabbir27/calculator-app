@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply text-ink font-display;
+  background-color: #EAEEE7;
+  background-image:
+    linear-gradient(rgba(43, 45, 41, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 45, 41, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Tabular figures everywhere numbers appear */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* LCD screen inset shadow, like a recessed calculator display */
+.lcd-screen {
+  background-color: #CBD8B8;
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Perforated "receipt tape" top edge for history list */
+.tape-edge {
+  height: 14px;
+  background-image: radial-gradient(circle at 7px 7px, #EAEEE7 5px, transparent 5.5px);
+  background-size: 14px 14px;
+  background-repeat: repeat-x;
+}
+
+/* Custom focus ring tuned to the amber accent */
+.focus-amber:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2B2D29, 0 0 0 4px #FF8A3D;
+}
+
+::selection {
+  background: #FF8A3D;
+  color: #1F2A1C;
+}
